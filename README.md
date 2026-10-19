@@ -1,13 +1,11 @@
-# Spanish Learning Platform
+# Spanish Learning Platform 🇪🇸
 
-A full-stack e-commerce application built with Spring Boot and a modern frontend. The project is fully containerized using Docker and designed to be straightforward to spin up locally or on any server.
+An interactive Spanish learning platform built for Greek speakers. Study through structured chapters, practice with chapter-based exams, and track your progress as you learn.
 
 ## Contributors
 
-- **Aggelos Ladas** (Backend) - [![Portfolio](https://img.shields.io/badge/Portfolio-24292f?style=flat-square&logo=googlechrome&logoColor=white)](https://www.aggelosladas.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aggelos-ladas-9057b1196/)
-- **Stefanos Souroullas** (Frontend)
-
-An interactive Spanish learning platform built for Greek speakers. Learn Spanish through structured chapters, practice with exams, and track your progress as you go.
+- **Aggelos Ladas** — Backend · [![Portfolio](https://img.shields.io/badge/Portfolio-24292f?style=flat-square&logo=googlechrome&logoColor=white)](https://www.aggelosladas.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aggelos-ladas-9057b1196/)
+- **Stefanos Souroullas** — Frontend
 
 ## Screenshots
 
@@ -25,34 +23,34 @@ Practice what you've learned with chapter-based questions and exercises.
 ![Exams](Images/Screenshot_3.png)
 
 ### Progress
-Keep track of your completed chapters, exam scores, and learning progress.
+Keep track of completed chapters, exam scores, and learning progress.
 
 ![Progress](Images/Screenshot_4.png)
 
 ### Exam Results
-Review your answers, check your score, and see where you made mistakes.
+Review your answers, check your score, and identify mistakes.
 
 ![Exam results](Images/Screenshot_5.png)
 
 ## Features
 
-- **Structured lessons:** Learn Spanish through organized chapters.
-- **Interactive exams:** Test your understanding with chapter-specific exercises.
-- **Progress tracking:** Keep track of completed chapters and exam performance.
-- **Answer review:** See your results and review incorrect answers.
-- **Resume learning:** Return to your learning progress instead of starting over.
-- **Greek interface:** Learn Spanish with explanations and navigation designed for Greek speakers.
+- **Structured lessons** — Learn Spanish through organized chapters.
+- **Interactive exams** — Test your understanding with chapter-specific exercises.
+- **Progress tracking** — Track completed chapters and exam performance.
+- **Answer review** — Review your results and identify incorrect answers.
+- **Persistent progress** — Return to your learning without starting over.
+- **Greek interface** — Learn Spanish with explanations and navigation designed for Greek speakers.
 
 ## Tech Stack
 
 - **Frontend:** React, Vite, Nginx
 - **Backend:** Python, FastAPI, Uvicorn
-- **Deployment:** Docker, Docker Compose
 - **Database:** SQLite
+- **Containerization:** Docker and Docker Compose
 
 ## Getting Started
 
-The easiest way to run the application locally is with Docker Compose.
+Docker Compose is the easiest way to run the application locally.
 
 ### Prerequisites
 
@@ -66,29 +64,29 @@ git clone https://github.com/AggelosLadas/Spanish-Learning-Platform.git
 cd Spanish-Learning-Platform
 ```
 
-### 2. Start the application
+### 2. Build and start the application
 
 ```bash
 docker compose up --build
 ```
 
-Docker Compose will build the frontend and backend images and start the required containers.
+This builds the frontend and backend images and starts the containers.
 
 ### 3. Open the application
 
-Once the containers are running, open:
+Once the containers are running, visit:
 
 **http://localhost:8080**
 
-The frontend is exposed on port `8080`, while the backend uses port `8000` inside the Docker setup.
+The frontend is available on port `8080`. The backend listens on port `8000` inside its container.
 
-If the application doesn't load, check the container status:
+To check container status:
 
 ```bash
 docker compose ps
 ```
 
-View the logs if needed:
+To view application logs:
 
 ```bash
 docker compose logs -f
@@ -96,25 +94,25 @@ docker compose logs -f
 
 ### 4. Stop the application
 
-Press `Ctrl+C` in the terminal running Compose, then run:
+Press `Ctrl+C` if running in the foreground, then run:
 
 ```bash
 docker compose down
 ```
 
-To start the application again later:
+To start it again in the background:
 
 ```bash
 docker compose up -d
 ```
 
-To rebuild the images after making changes:
+To rebuild after making changes:
 
 ```bash
 docker compose up -d --build
 ```
 
-**Note:** Database persistence depends on the configured Docker volumes and database path. Avoid removing volumes if you want to preserve existing data.
+**Note:** Database persistence depends on your Docker volume configuration. Avoid removing volumes if you want to preserve existing data.
 
 ## Project Structure
 
