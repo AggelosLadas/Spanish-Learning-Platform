@@ -1,0 +1,71 @@
+================================================================================
+Οδηγίες εγκατάστασης και εκκίνησης (μετά το clone)
+================================================================================
+Το έργο έχει δύο μέρη: Backend (FastAPI/Python) και Frontend (React/Vite).
+
+Προαπαιτούμενα
+--------------
+- Python 3.10 ή νεότερο ( συνιστάται 3.11+ )
+- Node.js LTS (π.χ. 20 ή 22) και npm — ή συμβατό package manager (pnpm/yarn)
+
+
+1. BACKEND
+----------
+Σε ένα νέο τερματικό:
+
+  cd backend
+
+Δημιουργία και ενεργοποίηση εικονικού περιβάλλοντος ( προαιρετικό αλλά συνιστάται ):
+
+  Windows (PowerShell / CMD):
+
+    python -m venv .venv
+    .venv\Scripts\activate
+
+  macOS / Linux:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+
+Εγκατάσταση εξαρτήσεων:
+
+  pip install -r requirements.txt
+
+Εκκίνηση API ( προεπιλεγμένο: http://127.0.0.1:8000 ):
+
+  uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+Σημειώσεις:
+- Το Frontend ανακατευθύνει το /api σε αυτόν τον διακομιστή (δείτε vite.config.js).
+- Η βάση SQLite δημιουργείται αυτόματα (αρχείο elearn.db κάτω από το φάκελο backend),
+  αν δεν έχεις ορίσει άλλο DATABASE_URL.
+- Προαιρετικά μπορείς να προσθέσεις ένα αρχείο backend/.env με μεταβλητές που
+  καλύπτονται από pydantic-settings (π.χ. DATABASE_URL).
+
+
+2. FRONTEND
+-----------
+Σε άλλο τερματικό:
+
+  cd frontend
+
+Εγκατάσταση εξαρτήσεων:
+
+  npm install
+
+Εκκίνηση dev server:
+
+  npm run dev
+
+Ανοίγει συνήθως το http://localhost:5173 — άσε το Backend να τρέχει στην παράλληλη
+κατάσταση, ώστε να λειτουργούν τα αιτήματα μέσω /api.
+
+
+Γρήγορο συνοπτικό
+-----------------
+Τερματικό A — Backend:  cd backend  → venv → pip install -r requirements.txt
+                      → uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+
+Τερματικό B — Frontend: cd frontend → npm install → npm run dev
+
+================================================================================
