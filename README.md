@@ -1,5 +1,12 @@
 # Spanish Learning Platform
 
+A full-stack e-commerce application built with Spring Boot and a modern frontend. The project is fully containerized using Docker and designed to be straightforward to spin up locally or on any server.
+
+## Contributors
+
+- **Aggelos Ladas** (Backend) - [![Portfolio](https://img.shields.io/badge/Portfolio-24292f?style=flat-square&logo=googlechrome&logoColor=white)](https://www.aggelosladas.com) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aggelos-ladas-9057b1196/)
+- **Stefanos Souroullas** (Frontend)
+
 An interactive Spanish learning platform built for Greek speakers. Learn Spanish through structured chapters, practice with exams, and track your progress as you go.
 
 ## Screenshots
